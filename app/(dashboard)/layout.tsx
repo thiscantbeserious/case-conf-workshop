@@ -1,0 +1,41 @@
+"use client";
+
+import { Box, Flex, Spinner, Center } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
+import { Navbar } from "@/components/layout/Navbar";
+import { useAuth, isLoggedIn } from "@/lib/client/useAuth";
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const router = useRouter();
+  const { user, isLoadingUser } = useAuth();
+
+  useEffect(() => {
+    if (!isLoggedIn()) {
+      router.push("/login");
+    }
+  }, [router]);
+
+  if (isLoadingUser || !user) {
+    return (
+      <Center minH="100vh">
+        <Spinner size="xl" />
+      </Center>
+    );
+  }
+
+  return (
+    <Flex minH="100vh">
+      <Sidebar />
+      <Box flex={1} bg="gray.50">
+        <Navbar />
+        <Box p={6}>{children}</Box>
+      </Box>
+    </Flex>
+  );
+}

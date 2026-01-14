@@ -29,3 +29,6 @@ tsconfig.tsbuildinfo
 
 # Session memory (local per developer)
 MEMORY.md
+
+# Test coverage
+coverage/

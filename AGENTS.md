@@ -3,6 +3,25 @@
 See [README.md](README.md) for setup and API docs.
 See [exercises.md](exercises.md) for workshop workflow.
 
+## Session Memory
+
+**File:** `MEMORY.md` - Cross-session knowledge base
+
+**On session start:**
+1. Read `MEMORY.md` for context from previous sessions
+2. Check "Current Context" for where we left off
+
+**During work:**
+- Append discoveries to "Codebase Insights"
+- Record decisions in "Technical Decisions"
+- Note blockers in "Blocked / TODO"
+
+**On session end:**
+- Update "Current Context" with status
+- Add learnings to "Learnings" section
+
+**To reset:** User command "clear memory" → delete content between section headers in `MEMORY.md`
+
 ## Agile SDLC Workflow
 
 ### 1. Requirements
@@ -43,7 +62,8 @@ See [exercises.md](exercises.md) for workshop workflow.
 
 ### 7. Reflect
 - What worked? What didn't?
-- Update this file with learnings
+- Update `MEMORY.md` with learnings and context
+- Update `AGENTS.md` if workflow improvements identified
 - New session → next feature
 
 ## Git Workflow

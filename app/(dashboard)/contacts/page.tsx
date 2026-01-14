@@ -19,6 +19,7 @@ import { ContactsApi, type Contact } from "@/lib/client/api";
 import { AddContactDialog } from "@/components/contacts/AddContactDialog";
 import { EditContactDialog } from "@/components/contacts/EditContactDialog";
 import { DeleteContactDialog } from "@/components/contacts/DeleteContactDialog";
+import { exportContactsToCSV } from "@/lib/utils/exportContacts";
 
 const PAGE_SIZE = 5;
 const FETCH_LIMIT = 1000; // Fetch more contacts for client-side filtering
@@ -67,27 +68,8 @@ export default function ContactsPage() {
     setPage(0);
   }, []);
 
-  const exportToCSV = useCallback(() => {
-    const headers = ["Organisation", "Description"];
-    const rows = filteredContacts.map((c) => [
-      c.organisation,
-      c.description || "",
-    ]);
-    const csvContent = [
-      headers.join(","),
-      ...rows.map((row) =>
-        row.map((cell) => `"${cell.replace(/"/g, '""')}"`).join(",")
-      ),
-    ].join("\n");
-
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    const date = new Date().toISOString().split("T")[0];
-    link.href = url;
-    link.download = `contacts-${date}.csv`;
-    link.click();
-    URL.revokeObjectURL(url);
+  const handleExportCSV = useCallback(() => {
+    exportContactsToCSV(filteredContacts);
   }, [filteredContacts]);
 
   return (
@@ -125,8 +107,8 @@ export default function ContactsPage() {
             <Button
               size="sm"
               variant="outline"
-              onClick={exportToCSV}
-              disabled={filteredContacts.length === 0}
+              onClick={handleExportCSV}
+              disabled={isLoading || filteredContacts.length === 0}
             >
               Export CSV
             </Button>

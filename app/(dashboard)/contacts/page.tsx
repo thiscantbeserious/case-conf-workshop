@@ -67,6 +67,29 @@ export default function ContactsPage() {
     setPage(0);
   }, []);
 
+  const exportToCSV = useCallback(() => {
+    const headers = ["Organisation", "Description"];
+    const rows = filteredContacts.map((c) => [
+      c.organisation,
+      c.description || "",
+    ]);
+    const csvContent = [
+      headers.join(","),
+      ...rows.map((row) =>
+        row.map((cell) => `"${cell.replace(/"/g, '""')}"`).join(",")
+      ),
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const date = new Date().toISOString().split("T")[0];
+    link.href = url;
+    link.download = `contacts-${date}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }, [filteredContacts]);
+
   return (
     <Box>
       <Stack gap={6}>
@@ -99,6 +122,14 @@ export default function ContactsPage() {
                 </Button>
               )}
             </Box>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={exportToCSV}
+              disabled={filteredContacts.length === 0}
+            >
+              Export CSV
+            </Button>
             <AddContactDialog />
           </Flex>
         </Flex>

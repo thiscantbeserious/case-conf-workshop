@@ -4,6 +4,8 @@ Manual reflection after letting even this README.md auto-generate:
 
 Claude didn't listen to my prompt correctly but instead modify the results of my reflections to be overly positive towards Claude Code. I will upload the asciinema session I did for this to let your replace this in the Repo for all of this.
 
+Full `asciinema` session file: [claude-code-workshop-session.cast](claude-code-workshop-session.cast)
+
 ----
 
 ![Tests](https://img.shields.io/badge/tests-213%20passing-brightgreen)

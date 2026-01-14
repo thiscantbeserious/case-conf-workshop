@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar > renders correctly with email when no fullName 1`] = `
+<div>
+  <header
+    class="css-4elti2"
+  >
+    <div
+      class="css-1lekzkb"
+    >
+      <p
+        class="css-1cwshxx"
+      >
+        Contact Management
+      </p>
+      <button
+        aria-haspopup="menu"
+        class="chakra-button chakra-menu__trigger css-tjtpa6"
+        data-controls="menu:_r_1_:content"
+        data-part="trigger"
+        data-scope="menu"
+        data-state="closed"
+        data-uid="_r_1_"
+        dir="ltr"
+        id="menu:_r_1_:trigger"
+        type="button"
+      >
+        test@example.com
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Navbar > renders correctly with user fullName 1`] = `
+<div>
+  <header
+    class="css-4elti2"
+  >
+    <div
+      class="css-1lekzkb"
+    >
+      <p
+        class="css-1cwshxx"
+      >
+        Contact Management
+      </p>
+      <button
+        aria-haspopup="menu"
+        class="chakra-button chakra-menu__trigger css-tjtpa6"
+        data-controls="menu:_r_0_:content"
+        data-part="trigger"
+        data-scope="menu"
+        data-state="closed"
+        data-uid="_r_0_"
+        dir="ltr"
+        id="menu:_r_0_:trigger"
+        type="button"
+      >
+        Test User
+      </button>
+    </div>
+  </header>
+</div>
+`;

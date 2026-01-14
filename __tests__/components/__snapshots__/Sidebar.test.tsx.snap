@@ -1,0 +1,225 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Sidebar > highlights active route correctly 1`] = `
+<div>
+  <aside
+    class="css-1xs3ljb"
+  >
+    <p
+      class="css-1uqp9cc"
+    >
+      CRM
+    </p>
+    <div
+      class="chakra-stack css-1op6ogi"
+    >
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🏠
+          </p>
+          <p>
+            Dashboard
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/contacts"
+      >
+        <div
+          class="css-5i1qf9"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            👥
+          </p>
+          <p>
+            Contacts
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/settings"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🔧
+          </p>
+          <p>
+            Settings
+          </p>
+        </div>
+      </a>
+    </div>
+  </aside>
+</div>
+`;
+
+exports[`Sidebar > renders correctly for admin user 1`] = `
+<div>
+  <aside
+    class="css-1xs3ljb"
+  >
+    <p
+      class="css-1uqp9cc"
+    >
+      CRM
+    </p>
+    <div
+      class="chakra-stack css-1op6ogi"
+    >
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/"
+      >
+        <div
+          class="css-5i1qf9"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🏠
+          </p>
+          <p>
+            Dashboard
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/contacts"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            👥
+          </p>
+          <p>
+            Contacts
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/admin"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            ⚙️
+          </p>
+          <p>
+            Admin
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/settings"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🔧
+          </p>
+          <p>
+            Settings
+          </p>
+        </div>
+      </a>
+    </div>
+  </aside>
+</div>
+`;
+
+exports[`Sidebar > renders correctly for regular user 1`] = `
+<div>
+  <aside
+    class="css-1xs3ljb"
+  >
+    <p
+      class="css-1uqp9cc"
+    >
+      CRM
+    </p>
+    <div
+      class="chakra-stack css-1op6ogi"
+    >
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/"
+      >
+        <div
+          class="css-5i1qf9"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🏠
+          </p>
+          <p>
+            Dashboard
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/contacts"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            👥
+          </p>
+          <p>
+            Contacts
+          </p>
+        </div>
+      </a>
+      <a
+        class="chakra-link css-tt9ddz"
+        href="/settings"
+      >
+        <div
+          class="css-1jjd54r"
+        >
+          <p
+            class="css-1ie1ybs"
+          >
+            🔧
+          </p>
+          <p>
+            Settings
+          </p>
+        </div>
+      </a>
+    </div>
+  </aside>
+</div>
+`;
